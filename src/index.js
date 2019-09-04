@@ -12,14 +12,13 @@ class App extends Component {
     setInputValue(event) {
         const text = event.target.value;
         this.setState({text});
-       // console.log(this.state.text);
     }
 
     render() {
         return (
             <div>
                 <h1>State Example</h1>
-                <input type="text" value={this.state.text} onChange={this.setInputValue.bind(this)} />
+                <input type="text" value={this.state.text} onChange={(event) => this.setInputValue(event)} />
             </div>
         );
     }
