@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import NewComponent from './new';
 
-class App extends React.Component {
+class App extends Component {
+    constructor(props) {
+        super(props);
+    }
+
     render() {
         return (
-            <div>
-                <h1>React initialized</h1>
+            <div style={{border: '1px solid #000'}}>
+                <h1>App Component</h1>
+                <NewComponent text={'Test content'} />
             </div>
         );
     }
