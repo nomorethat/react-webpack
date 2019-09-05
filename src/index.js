@@ -5,13 +5,29 @@ import NewComponent from './new';
 class App extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            mass: [
+                {
+                    id: 1,
+                    text: 'item 1'
+                },
+                {
+                    id: 2,
+                    text: 'item 2'
+                },
+                {
+                    id: 3,
+                    text: 'item 3'
+                }
+            ]
+        };
     }
 
     render() {
         return (
             <div style={{border: '1px solid #000'}}>
                 <h1>App Component</h1>
-                <NewComponent text={'Test content'} />
+                <NewComponent mass={this.state.mass} text={'Test content'} />
             </div>
         );
     }
